@@ -16,6 +16,9 @@ spec:
         server:
           extraArgs:
             - --insecure   # remove this if you set up TLS
+        crds:
+          install: false
+          keep: false
   destination:
     server: https://kubernetes.default.svc
     namespace: argocd
