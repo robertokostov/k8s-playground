@@ -7,3 +7,7 @@ app = FastAPI()
 def get_utc_time():
     utc_now = datetime.now(timezone.utc)
     return {"utc_time": utc_now.isoformat()}
+
+@app.get("/health")
+def health():
+    return {"status": "ok"}
